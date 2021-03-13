@@ -29,4 +29,12 @@ public class ProducerEntity {
     public void setProducerName(String producerName) {
         this.producerName = producerName;
     }
+
+    @Override
+    public String toString() {
+        return "ProducerEntity{" +
+                "producerId=" + producerId +
+                ", producerName='" + producerName + '\'' +
+                '}';
+    }
 }
