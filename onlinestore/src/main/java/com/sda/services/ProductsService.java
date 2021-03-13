@@ -14,19 +14,28 @@ public class ProductsService {
     @Autowired
     private ProductsRepository productsRepository;
 
-    public void addProduct(ProductsEntity entity){
-        productsRepository.save(entity);
-    }
-    public void editProduct(ProductsEntity entity){
-        List<ProductsEntity> products = getAllProducts();
-
+    public void addProduct(ProductsEntity newProduct) {
+        productsRepository.save(newProduct);
     }
 
-    private List<ProductsEntity> getAllProducts() {
-
+    public List<ProductsEntity> getAllProducts() {
+        return productsRepository.findAll();
     }
 
-    public void deleteProduct(ProductsEntity entity) {
+    public void editProduct(ProductsEntity editedProduct) {
+        productsRepository.save(editedProduct);
+    }
+
+    public void deleteProduct(long id) {
+        productsRepository.deleteById(id);
+    }
+
+    public ProductsRepository getProductsRepository() {
+        return productsRepository;
+    }
+
+    public void setProductsRepository(ProductsRepository productsRepository) {
+        this.productsRepository = productsRepository;
     }
 }
 
