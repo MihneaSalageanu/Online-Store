@@ -1,6 +1,6 @@
-package com.sda.repositories;
+package com.sda.onlinestore.repositories;
 
-import com.sda.onlinestore.entity.ProductsEntity;
+import com.sda.onlinestore.entities.ProductsEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

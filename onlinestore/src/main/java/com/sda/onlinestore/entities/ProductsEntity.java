@@ -1,13 +1,13 @@
-package com.sda.onlinestore.entity;
+package com.sda.onlinestore.entities;
 
 import javax.persistence.*;
 
 @Entity
-@Table (name = "produse")
+@Table(name = "produse")
 
 public class ProductsEntity {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id;
     private String name;

@@ -55,7 +55,7 @@ public class OrderLineEntity {
     @Override
     public String toString() {
         return "OrderLineEntity{" +
-                "Id=" + Id +
+                "Id=" + OrderLineId +
                 ", product='" + product + '\'' +
                 ", quantityOfProducts=" + quantityOfProducts +
                 ", price=" + price +

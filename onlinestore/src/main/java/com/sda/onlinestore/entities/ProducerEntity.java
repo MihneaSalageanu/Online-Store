@@ -1,9 +1,9 @@
-package com.sda.onlinestore.entity;
+package com.sda.onlinestore.entities;
 
 import javax.persistence.*;
 
 @Entity
-@Table (name = "producer")
+@Table(name = "producer")
 
 public class ProducerEntity {
     @Id
@@ -12,6 +12,7 @@ public class ProducerEntity {
     private long producerId;
     @Column(length = 50)
     private String producerName;
+
     @Column(length = 255)
 
     public long getProducerId() {

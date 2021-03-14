@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My orders</title>
+</head>
+<body>
+
+<p>Here are my orders</p>
+
+<li th:each="order: ${orders}">
+    <p th:text="${order.name}"/>
+</li>
+
+</body>
+</html>

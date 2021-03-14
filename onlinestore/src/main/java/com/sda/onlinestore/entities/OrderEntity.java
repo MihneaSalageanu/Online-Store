@@ -13,7 +13,7 @@ public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private long id;
+    private int id;
     private String username;
     private double totalCost;
     private Date date;
@@ -25,7 +25,7 @@ public class OrderEntity {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
