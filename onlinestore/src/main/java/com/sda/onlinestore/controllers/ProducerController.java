@@ -36,7 +36,7 @@ public class ProducerController {
         public String addProducer (@ModelAttribute ProducerEntity newProducer){
 
             producerService.addProducer(newProducer);
-            return "redirect:/getProducers"
+            return "redirect:/getProducers";
 
         }
     }
