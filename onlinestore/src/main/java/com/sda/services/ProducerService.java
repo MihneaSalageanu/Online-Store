@@ -14,7 +14,7 @@ public class ProducerService {
     @Autowired
     private ProducerRepository producerRepository;
 
-    public void addProducer(ProductsEntity newProducer) {
+    public void addProducer(ProducerEntity newProducer) {
         producerRepository.save(newProducer);
     }
 
@@ -23,7 +23,7 @@ public class ProducerService {
     }
 
     public void editProducer(ProducerEntity editedProducer) {
-        ProducerRepository.save(editedProducer);
+        producerRepository.save(editedProducer);
     }
 
     public void deleteProducer(long id) {
