@@ -1,4 +1,4 @@
-package com.sda.repositories;
+package com.sda.onlinestore.repositories;
 
 import com.sda.onlinestore.entities.OrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

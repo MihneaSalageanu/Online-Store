@@ -9,16 +9,14 @@ public class OrderLineEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer OrderLineId;
+
+    //produs Many to one
     private String product;
     private Double quantityOfProducts;
     private Double price;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
-
-    public static enum OrderStatus {
-        PENDING, AWAITING_PAYMENT, AWAITING_SHIPPING, SHIPPED, COMPLETED
-    }
 
     public Integer getId() {
         return OrderLineId;

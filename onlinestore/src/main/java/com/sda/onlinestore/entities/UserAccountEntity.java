@@ -12,6 +12,8 @@ public class UserAccountEntity {
     private String email;
     private String password;
     private String adress;
+
+    // One to one 
     private String logotype;
     private String role;
     private String preferredChannel;

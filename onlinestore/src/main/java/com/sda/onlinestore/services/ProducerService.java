@@ -1,8 +1,8 @@
-package com.sda.services;
+package com.sda.onlinestore.services;
 
-import com.sda.onlinestore.entity.ProducerEntity;
-import com.sda.onlinestore.entity.ProductsEntity;
-import com.sda.repositories.ProducerRepository;
+
+import com.sda.onlinestore.entities.ProducerEntity;
+import com.sda.onlinestore.repositories.ProducerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,11 +1,11 @@
-package com.sda.services;
+package com.sda.onlinestore.services;
 
-import com.sda.onlinestore.entity.ProductsEntity;
-import com.sda.repositories.ProductsRepository;
+
+import com.sda.onlinestore.entities.ProductsEntity;
+import com.sda.onlinestore.repositories.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import java.util.List;
 

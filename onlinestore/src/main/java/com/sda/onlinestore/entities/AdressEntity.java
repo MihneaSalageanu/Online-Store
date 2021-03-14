@@ -48,4 +48,5 @@ private Integer addressId;
     public void setZipCode(long zipCode){
         this.zipCode = zipCode;
     }
+
 }
