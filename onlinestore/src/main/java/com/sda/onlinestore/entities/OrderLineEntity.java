@@ -59,4 +59,8 @@ public class OrderLineEntity {
                 ", price=" + price +
                 '}';
     }
+
+    public enum OrderStatus {
+        PENDING, AWAITING_PAYMENT, AWAITING_SHIPPING, SHIPPED, COMPLETED
+    }
 }
