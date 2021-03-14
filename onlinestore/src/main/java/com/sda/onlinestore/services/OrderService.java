@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class OrderService {
-
+    @Autowired
     private OrderRepository orderRepository;
 
     public void findById(Integer id) {
@@ -27,7 +27,7 @@ public class OrderService {
 
     public List<OrderEntity> getAllOrders() {
         List<OrderEntity> orderEntityList = orderRepository.findAll();
-        return orderRepository.findAll();
+        return orderEntityList;
     }
 
 
