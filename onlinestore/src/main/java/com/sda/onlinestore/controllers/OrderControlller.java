@@ -17,7 +17,7 @@ public class OrderControlller {
     private OrderService orderService;
 
     @GetMapping(path = "get-orders")
-    public String addOrder(Model model) {
+    public String getOrder(Model model) {
         List<OrderEntity> orderList = orderService.getAllOrders();
         model.addAttribute("orders", orderList);
         return "orders";
