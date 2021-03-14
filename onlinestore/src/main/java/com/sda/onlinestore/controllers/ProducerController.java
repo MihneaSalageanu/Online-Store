@@ -24,18 +24,21 @@ public class ProducerController {
         List<ProducerEntity> producerList = producerService.getAllProducers();
         model.addAttribute("producers", producerList);
         return "producers";
+    }
 
 
         @GetMapping(path = "add-producer")
         public String addProducerPage (Model model){
-            model.addAttribute(("newProducer", new ProducerEntity());
+            model.addAttribute("newProducer", new ProducerEntity());
             return "add-producer";
         }
 
         @PostMapping(path = "Producer/add")
         public String addProducer (@ModelAttribute ProducerEntity newProducer){
-            ProducerService.addProducer(newProducer);
+
+            producerService.addProducer(newProducer);
             return "redirect:/getProducers";
+
         }
     }
-}
+
