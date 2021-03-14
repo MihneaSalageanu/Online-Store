@@ -1,8 +1,9 @@
-package com.sda.controllers;
+package com.sda.onlinestore.controllers;
 
-import com.sda.onlinestore.entity.ProducerEntity;
-import com.sda.services.ProducerService;
-import com.sda.services.ProductsService;
+
+import com.sda.onlinestore.entities.ProducerEntity;
+import com.sda.onlinestore.services.ProducerService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +34,7 @@ public class ProducerController {
         @PostMapping(path = "Producer/add")
         public String addProducer (@ModelAttribute ProducerEntity newProducer){
             ProducerService.addProducer(newProducer);
-            return "redirect:/getProducers"
+            return "redirect:/getProducers";
         }
     }
 }

@@ -1,8 +1,9 @@
-package com.sda.controllers;
+package com.sda.onlinestore.controllers;
 
-import com.sda.onlinestore.entity.ProducerEntity;
-import com.sda.onlinestore.entity.ProductsEntity;
-import com.sda.services.ProductsService;
+
+
+import com.sda.onlinestore.entities.ProductsEntity;
+import com.sda.onlinestore.services.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,6 +35,6 @@ public class ProductsController {
     @PostMapping(path = "product/add")
     public String addProduct(@ModelAttribute ProductsEntity newProduct) {
         productsService.addProduct(newProduct);
-        return "redirect:/getProducts"
+        return "redirect:/getProducts";
     }
 }
