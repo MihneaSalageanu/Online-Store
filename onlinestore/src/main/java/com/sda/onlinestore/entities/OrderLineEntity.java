@@ -10,7 +10,8 @@ public class OrderLineEntity {
 
     private Integer OrderLineId;
 
-    //produs Many to one
+//    @ManyToOne
+//    @JoinColumn(name = )
     private String product;
     private Double quantityOfProducts;
     private Double price;
