@@ -25,6 +25,7 @@ public class ProducerController {
         model.addAttribute("producers", producerList);
         return "producers";
 
+
         @GetMapping(path = "add-producer")
         public String addProducerPage (Model model){
             model.addAttribute(("newProducer", new ProducerEntity());
