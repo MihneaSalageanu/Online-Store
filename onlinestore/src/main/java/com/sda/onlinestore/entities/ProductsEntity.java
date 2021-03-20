@@ -15,18 +15,17 @@ public class ProductsEntity {
     private String url;
 
     @ManyToOne
-    private String category;
+    private CategoryEntity category;
     private long price;
 
-
-    private String producer;
+    @ManyToOne
+    private ProducerEntity producer;
 
    enum ProductType{
        ELECTRONICE, ALIMENTE, HAINE
    }
    @Enumerated(EnumType.STRING)
    private ProductType type;
-
 
     public long getId() {
         return id;
@@ -60,11 +59,11 @@ public class ProductsEntity {
         this.url = url;
     }
 
-    public String getCategory() {
+    public CategoryEntity getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(CategoryEntity category) {
         this.category = category;
     }
 
@@ -76,11 +75,11 @@ public class ProductsEntity {
         this.price = price;
     }
 
-    public String getProducer() {
+    public ProducerEntity getProducer() {
         return producer;
     }
 
-    public void setProducer(String producer) {
+    public void setProducer(ProducerEntity producer) {
         this.producer = producer;
     }
 
@@ -99,9 +98,9 @@ public class ProductsEntity {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", url='" + url + '\'' +
-                ", category='" + category + '\'' +
+                ", category=" + category +
                 ", price=" + price +
-                ", producer='" + producer + '\'' +
+                ", producer=" + producer +
                 ", type=" + type +
                 '}';
     }
