@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>OrderLine</title>
+</head>
+<body>
+<li th:each="orderLine:${orderLines}">
+    <p th:text="${orderLine.product}"/>
+
+</li>
+</body>
+</html>

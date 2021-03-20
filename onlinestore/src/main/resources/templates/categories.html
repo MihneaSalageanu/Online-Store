@@ -6,10 +6,13 @@
     <title>My categories </title>
 </head>
 <body>
+
+<a th:href="@{/add-category}"><button>ADD CATEGORY</button></a>
 <p>Here are my categories</p>
 
-<li th:each="categories: ${categories}">
-<p th:text="${categories.categoryName}"></p>
+<li th:each="book: ${categories}">
+    <a th:href="@{/edit-category/{id}(id = ${category.id})}"><button>Edit</button></a>
+</li>
 </li>
 </body>
 </html>
