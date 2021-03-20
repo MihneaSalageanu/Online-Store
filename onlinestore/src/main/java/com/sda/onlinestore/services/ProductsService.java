@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductsService {
@@ -36,6 +37,12 @@ public class ProductsService {
 
     public void setProductsRepository(ProductsRepository productsRepository) {
         this.productsRepository = productsRepository;
+    }
+
+    public ProductsEntity getProduct(long id) {
+        Optional<ProductsEntity> productsEntityOptional = productsRepository.findById(id);
+        ProductsEntity productsEntity = productsEntityOptional.get();
+        return productsEntity;
     }
 }
 
