@@ -5,19 +5,14 @@
     <title>Add category</title>
 </head>
 <body>
-<form action="#" th:action="@{category/save}" th:object="${category}" method="post">
+<form action="#" th:action="@{category/save}" th:object="${newCategory}" method="post">
     <table border="1">
         <tr>
             <td><label>Name</label></td>
             <td><input type="text" th:field="*{name}"/></td>
         </tr>
 
-        <tr>
-            <td><label>Description</label></td>
-            <td><input type="text" th:field="*{Description}"/></td>
-        </tr>
-
-        <tr>
+              <tr>
             <td>
                 <input type="submit" value="Submit"/>
             </td>

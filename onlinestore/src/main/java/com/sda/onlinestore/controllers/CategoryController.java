@@ -2,13 +2,14 @@ package com.sda.onlinestore.controllers;
 
 import com.sda.onlinestore.entities.CategoryEntity;
 import com.sda.onlinestore.services.CategoryService;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class CategoryController {
     @GetMapping(path = "getCategory")
     public void getCategory(CategoryService categoryService) {
