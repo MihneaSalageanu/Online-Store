@@ -13,8 +13,12 @@ public class ProductsEntity {
     private String name;
     private String description;
     private String url;
+
+    @ManyToOne
     private String category;
     private long price;
+
+
     private String producer;
 
    enum ProductType{

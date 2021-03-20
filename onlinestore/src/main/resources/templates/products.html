@@ -7,7 +7,9 @@
 </head>
 <body>
 
-<a th:href="@{/add-product}"><button>Add product</button></a>
+<a th:href="@{/add-product}">
+    <button>Add product</button>
+</a>
 
 <p>Here are my products</p>
 
@@ -15,9 +17,18 @@
     <p th:text="${product.id}"/>
     <p th:text="${product.name}"/>
     <p th:text="${product.description}"/>
-    <a th:href="@{/delete-product/{id}(id = ${product.id})}"><button>Delete</button></a>
-    <a th:href="@{/edit-product/{id}(id = ${product.id})}"><button>Edit</button></a>
-    </li>
+    <p th:text="${product.url}"/>
+    <p th:text="${product.category}"/>
+    <p th:text="${product.price}"/>
+    <p th:text="${product.producer}"/>
+
+    <a th:href="@{/delete-product/{id}(id = ${product.id})}">
+        <button>Delete</button>
+    </a>
+    <a th:href="@{/edit-product/{id}(id = ${product.id})}">
+        <button>Edit</button>
+    </a>
+</li>
 
 </body>
 </html>
