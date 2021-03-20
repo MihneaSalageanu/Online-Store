@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProducerService {
@@ -37,4 +38,12 @@ public class ProducerService {
     public void setProducerRepository(ProducerRepository producerRepository) {
         this.producerRepository = producerRepository;
     }
+
+
+    public ProducerEntity getProducer(long id) {
+        Optional<ProducerEntity> producerEntityOptional = producerRepository.findById(id);
+        ProducerEntity producerEntity = producerEntityOptional.get();
+        return producerEntity;
+    }
+
 }

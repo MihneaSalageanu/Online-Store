@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit page</title>
+</head>
+<body>
+<form action="#" th:action="@{producer/edit}" th:object="${producerToBeEdit}" method="post">
+    <table border="1">
+        <tr>
+            <td><label>Id</label></td>
+            <td><input readonly type="text" th:field="*{producerId}"/></td>
+        </tr>
+        <tr>
+            <td><label> Name</label></td>
+            <td><input type="text" th:field="*{producerName}"/></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Edit"/></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
