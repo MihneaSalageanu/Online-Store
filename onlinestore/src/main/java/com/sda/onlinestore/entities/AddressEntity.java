@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class AddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Integer addressId;
+    private Integer addressId;
     private String country;
     private String city;
     private String street;
@@ -45,7 +45,7 @@ private Integer addressId;
         this.street = street;
     }
 
-    public void setZipCode(long zipCode){
+    public void setZipCode(long zipCode) {
         this.zipCode = zipCode;
     }
 

@@ -6,10 +6,10 @@
 </head>
 <body>
 
-<form action="#" th:action="@{category/add}" th:object="${newCategory}" method="post">
+<form action="#" th:action="@{/category/add}" th:object="${newCategory}" method="post">
     <table border="1">
         <tr>
-            <td><label>Name</label></td>
+            <td><label>New Category</label></td>
             <td><input type="text" th:field="*{categoryName}"/></td>
         </tr>
 

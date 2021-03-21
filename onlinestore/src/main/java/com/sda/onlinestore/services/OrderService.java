@@ -1,17 +1,29 @@
 package com.sda.onlinestore.services;
 
 import com.sda.onlinestore.entities.OrderEntity;
+import com.sda.onlinestore.entities.OrderLineEntity;
+import com.sda.onlinestore.entities.ProductsEntity;
+import com.sda.onlinestore.entities.UserAccountEntity;
 import com.sda.onlinestore.repositories.OrderRepository;
-import org.hibernate.criterion.Order;
+import com.sda.onlinestore.repositories.ProductsRepository;
+import com.sda.onlinestore.repositories.UserAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
+
+    @Autowired
+    private UserAccountRepository userAccountRepository;
+
+    @Autowired
+    private ProductsRepository productsRepository;
 
     public void findById(Integer id) {
         orderRepository.findById(id);
@@ -29,6 +41,8 @@ public class OrderService {
         List<OrderEntity> orderEntityList = orderRepository.findAll();
         return orderEntityList;
     }
+
+
 
 
 }

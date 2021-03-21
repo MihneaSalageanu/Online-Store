@@ -73,4 +73,5 @@ public class UserAccountEntity {
     public void setPreferredChannel(String preferredChannel) {
         this.preferredChannel = preferredChannel;
     }
+
 }
