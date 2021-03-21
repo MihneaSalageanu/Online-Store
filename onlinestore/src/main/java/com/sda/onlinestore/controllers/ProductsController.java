@@ -35,7 +35,7 @@ public class ProductsController {
     public String addProductPage(Model model) {
         model.addAttribute("newProduct", new ProductsEntity());
         List<ProducerEntity> producerEntities = producerService.getAll();
-        model.addAttribute("producers", producerEntities);
+        model.addAttribute("product", producerEntities);
         return "add-product";
     }
 

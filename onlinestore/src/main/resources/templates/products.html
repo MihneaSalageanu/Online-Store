@@ -76,7 +76,7 @@
                 <a th:href="@{/delete-product/{id}(id = ${product.id})}" class="btn btn-danger">Delete</a>
                 <a th:href="@{/edit-product/{id}(id = ${product.id})}" class="btn btn-primary">Edit</a>
             </div>
-        </div>
+
 
 
     <p th:text="${product.id}"/>
@@ -87,8 +87,8 @@
     <p th:text="${product.price}"/>
     <p th:text="${product.producer}"/>
 
-
-    <a th:href="@{/add-product}"<button type="button" class="btn btn-primary"></button>Add product</button></a>
+    </div>
+    <a th:href="@{/add-product}"></a><button type="button" class="btn btn-primary"></button>Add product</button></a>
     <a th:href="@{/delete-product/{id}(id = ${product.id})}"><button type="button" class="btn btn-danger"></button>Delete product</button></a>
     <a th:href="@{/edit-product/{id}(id = ${product.id})}"><button type="button" class="btn btn-info"></button>Edit product</button></a>
 
