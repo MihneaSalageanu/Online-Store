@@ -1,8 +1,8 @@
 package com.sda.onlinestore.services;
 
 import com.sda.onlinestore.entities.OrderEntity;
-import com.sda.onlinestore.entities.OrderLineEntity;
-import com.sda.onlinestore.entities.ProductsEntity;
+
+
 import com.sda.onlinestore.entities.UserAccountEntity;
 import com.sda.onlinestore.repositories.OrderRepository;
 import com.sda.onlinestore.repositories.ProductsRepository;
@@ -10,7 +10,7 @@ import com.sda.onlinestore.repositories.UserAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -42,6 +42,7 @@ public class OrderService {
         return orderEntityList;
     }
 
+   
 
 
 

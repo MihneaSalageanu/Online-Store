@@ -34,9 +34,8 @@ public class ProducerController {
         return "add-producer";
     }
 
-    @PostMapping(path = "Producer/add")
+    @PostMapping(path = "producer/add")
     public String addProducer(@ModelAttribute ProducerEntity newProducer) {
-
         producerService.addProducer(newProducer);
         return "redirect:/getProducers";
 

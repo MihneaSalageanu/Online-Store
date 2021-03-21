@@ -9,17 +9,15 @@ public class ProducerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private long producerId;
+    private Long producerId;
     @Column(length = 50)
     private String producerName;
 
-    @Column(length = 255)
-
-    public long getProducerId() {
+    public Long getProducerId() {
         return producerId;
     }
 
-    public void setProducerId(long producerId) {
+    public void setProducerId(Long producerId) {
         this.producerId = producerId;
     }
 
@@ -30,6 +28,9 @@ public class ProducerEntity {
     public void setProducerName(String producerName) {
         this.producerName = producerName;
     }
+
+    @Column(length = 255)
+
 
     @Override
     public String toString() {

@@ -45,5 +45,9 @@ public class ProducerService {
         ProducerEntity producerEntity = producerEntityOptional.get();
         return producerEntity;
     }
+     public List<ProducerEntity> getAll(){
+        List<ProducerEntity> producerEntities = producerRepository.findAll();
+        return producerEntities;
+     }
 
 }
