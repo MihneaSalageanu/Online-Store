@@ -10,9 +10,7 @@ public class OrderLineEntity {
 
     private Integer OrderLineId;
 
-//    @ManyToOne
-//    @JoinColumn(name = )
-    private String product;
+
     private Double quantityOfProducts;
     private Double price;
 
@@ -22,36 +20,44 @@ public class OrderLineEntity {
     @ManyToOne
     private ProductsEntity product;
 
-    public Integer getId() {
+    public Integer getOrderLineId() {
         return OrderLineId;
     }
 
-    public void setId(Integer id) {
-        OrderLineId = id;
+    public void setOrderLineId(Integer orderLineId) {
+        OrderLineId = orderLineId;
     }
 
-    public String getProduct() {
-        return product;
-    }
-
-    public void setProduct(String product) {
-        this.product = product;
-    }
-
-    public double getQuantityOfProducts() {
+    public Double getQuantityOfProducts() {
         return quantityOfProducts;
     }
 
-    public void setQuantityOfProducts(double quantityOfProducts) {
+    public void setQuantityOfProducts(Double quantityOfProducts) {
         this.quantityOfProducts = quantityOfProducts;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
+    }
+
+    public ProductsEntity getProduct() {
+        return product;
+    }
+
+    public void setProduct(ProductsEntity product) {
+        this.product = product;
     }
 
     @Override

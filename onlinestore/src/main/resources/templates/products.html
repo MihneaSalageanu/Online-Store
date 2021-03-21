@@ -82,7 +82,7 @@
             <p class="card-text" th:text="${product.description}"></p>
 <!--            <a th:href="@{/add-product}"></a>-->
 
-            <a th:href="@{/add-product/{id}(id = ${product.id})}" class="btn btn-success">Add</a>
+            <a th:href="@{/add-product}" class="btn btn-success">Add</a>
             <a th:href="@{/delete-product/{id}(id = ${product.id})}" class="btn btn-danger">Delete</a>
             <a th:href="@{/edit-product/{id}(id = ${product.id})}" class="btn btn-primary">Edit</a>
         </div>
