@@ -9,11 +9,7 @@ public class OrderLineEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer OrderLineId;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> ca145a09790a54afd0437def1786d88f33351612
     private Double quantityOfProducts;
     private Double price;
 
@@ -34,7 +30,6 @@ public class OrderLineEntity {
         OrderLineId = orderLineId;
     }
 
-<<<<<<< HEAD
     public Double getQuantityOfProducts() {
         return quantityOfProducts;
     }
@@ -64,7 +59,6 @@ public class OrderLineEntity {
     }
 
     public void setProduct(ProductsEntity product) {
-=======
 
     public double getQuantityOfProducts() {
         return quantityOfProducts;
