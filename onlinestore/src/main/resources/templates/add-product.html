@@ -40,9 +40,9 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect2">Producers</label>
             </div>
-            <select id="inputGroupSelect2" class="custom-select" th:field="${newProduct.producer.id}">
-                <option selected th:value="null">Choose</option>
-                <option th:each="producer : ${producers}" th:value="${producer.id}" th:text="${producer.name}"></option>
+            <select id="inputGroupSelect2" class="custom-select" th:field="${newProduct.producer.producerId}">
+                <option selected th:value!="null">Choose</option>
+                <option th:each="producer : ${producers}" th:value="${producer.producerId}" th:text="${producer.name}"></option>
             </select>
         </div>
     </table>

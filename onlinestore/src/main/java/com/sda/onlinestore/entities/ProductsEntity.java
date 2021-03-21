@@ -1,6 +1,8 @@
 package com.sda.onlinestore.entities;
 
 import javax.persistence.*;
+import java.awt.*;
+import java.net.Proxy;
 
 @Entity
 @Table(name = "produse")
@@ -18,7 +20,7 @@ public class ProductsEntity {
     private CategoryEntity category;
     private long price;
 
-    @ManyToOne
+    @ManyToOne (cascade = CascadeType.ALL)
     private ProducerEntity producer;
 
    enum ProductType{
