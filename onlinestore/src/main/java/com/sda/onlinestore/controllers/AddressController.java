@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -33,6 +34,26 @@ public class AddressController {
     @PostMapping(path = "address/add")
     public String addAddress(@ModelAttribute AddressEntity newAddress){
         addressService.addAddress(newAddress);
+        return "redirect:/getAddress";
+    }
+
+    @GetMapping(path="edit-address/{id}")
+    public String editAddressPage(Model model, @PathVariable("id") Integer id){
+        AddressEntity addressEntity = addressService.getAddress(id);
+        model.addAttribute("addressToBeEdit", addressEntity);
+        return "edit-address";
+
+    }
+
+    @PostMapping(path = "address/edit")
+    public String editAddress(@ModelAttribute AddressEntity addressToBeEdit){
+        addressService.editAddress(addressToBeEdit);
+        return "redirect:/getAddress";
+    }
+
+    @GetMapping(path = "delete-address/{id}")
+    public String delete(Model model, @PathVariable("id") Integer id){
+        addressService.deleteAddressById(id);
         return "redirect:/getAddress";
     }
 }

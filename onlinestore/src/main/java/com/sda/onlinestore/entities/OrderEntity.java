@@ -14,12 +14,18 @@ public class OrderEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int id;
-    private String username;
     private double totalCost;
     private Date date;
+    private String status;
 
     @OneToMany
-    public List<OrderLineEntity> orderline = new ArrayList<>();
+    private List<OrderLineEntity> orderline = new ArrayList<>();
+
+    @OneToOne
+    private AddressEntity deliveryAddress;
+
+    @OneToOne
+    private UserAccountEntity userAccount;
 
     public long getId() {
         return id;
@@ -29,13 +35,6 @@ public class OrderEntity {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     public double getTotalCost() {
         return totalCost;
@@ -53,15 +52,52 @@ public class OrderEntity {
         this.date = date;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public List<OrderLineEntity> getOrderline() {
+        return orderline;
+    }
+
+    public void setOrderline(List<OrderLineEntity> orderline) {
+        this.orderline = orderline;
+    }
+
+    public AddressEntity getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
+    public void setDeliveryAddress(AddressEntity deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
+
+    public UserAccountEntity getUserAccount() {
+        return userAccount;
+    }
+
+    public void setUserAccount(UserAccountEntity userAccount) {
+        this.userAccount = userAccount;
+    }
+
     @Override
     public String toString() {
         return "OrderEntity{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", username='" +
                 ", totalCost=" + totalCost +
                 ", date=" + date +
                 '}';
     }
+
 
 
 }
