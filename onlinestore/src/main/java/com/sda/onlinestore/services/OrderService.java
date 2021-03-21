@@ -42,15 +42,5 @@ public class OrderService {
         return orderEntityList;
     }
 
-<<<<<<< HEAD
-//    public void addToChart(Integer userId, Integer productId){
-//        OrderEntity orderEntity = new OrderEntity();
-//        Optional<UserAccountEntity> userBox =
-//    }
-=======
-   
-
-
->>>>>>> ca145a09790a54afd0437def1786d88f33351612
 
 }
