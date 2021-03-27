@@ -9,50 +9,28 @@ public class OrderLineEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer OrderLineId;
+
     private Double quantityOfProducts;
     private Double price;
-
-    @ManyToOne
-    private ProductsEntity product;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
 
 
-    public Integer getId() {
-        return OrderLineId;
-    }
-
-    public void setId(Integer id) {
-        OrderLineId = id;
-    }
-
-
-    public double getQuantityOfProducts() {
+    public Double getQuantityOfProducts() {
         return quantityOfProducts;
     }
 
-    public void setQuantityOfProducts(double quantityOfProducts) {
-
-        this.quantityOfProducts = quantityOfProducts;
-    }
-
-    public double getPrice() {
-
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-
-        this.price = price;
-    }
-
-    public ProductsEntity getProduct(){
+    public ProductsEntity getProduct() {
         return product;
     }
 
-    public void setProduct(ProductsEntity product){
+    public void setProduct(ProductsEntity product) {
         this.product = product;
     }
 
