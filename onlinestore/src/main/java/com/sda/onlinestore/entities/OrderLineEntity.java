@@ -18,8 +18,7 @@ public class OrderLineEntity {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
-    @ManyToOne
-    private ProductsEntity product;
+
 
     public Integer getId() {
         return OrderLineId;

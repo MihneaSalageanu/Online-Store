@@ -2,6 +2,7 @@ package com.sda.onlinestore.controllers;
 
 import com.sda.onlinestore.entities.UserAccountEntity;
 import com.sda.onlinestore.services.UserAccountService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,21 +38,37 @@ public class UserAccountController {
     }
 
     @GetMapping(path = "edit-userAccount/{id}")
-    public String editUserAccount (Model model, @PathVariable("id") Integer id){
+    public String editUserAccount(Model model, @PathVariable("id") Integer id) {
         UserAccountEntity userAccountEntity = userAccountService.getUserById(id);
         model.addAttribute("userToBeEdited", userAccountEntity);
         return "redirect:/edit-userAccount";
     }
 
     @PostMapping(path = "userAccount/edit")
-    public String editUserAccount(@ModelAttribute UserAccountEntity userToBeEdited){
+    public String editUserAccount(@ModelAttribute UserAccountEntity userToBeEdited) {
         userAccountService.editUser(userToBeEdited);
         return "redirect:/getUser";
     }
 
-    @GetMapping(path = "delete-userAccoount/{id}")
-    public String delete(Model model, @PathVariable("id") Integer id){
+    @GetMapping(path = "delete-userAccount/{id}")
+    public String delete(Model model, @PathVariable("id") Integer id) {
         userAccountService.deleteUserById(id);
         return "redirect:/getUser";
+    }
+
+    @GetMapping("/login")
+    public String getLoginPage() {
+        return "login";
+    }
+    @GetMapping(path = "/register")
+    public String getRegisterPage(Model model){
+        model.addAttribute("user", new UserAccountEntity());
+        return "register";
+    }
+
+    @PostMapping(path="/register/add")
+    public String register(@ModelAttribute UserAccountEntity user){
+        userAccountService.addCustomer(user);
+        return "redirect:/login";
     }
 }

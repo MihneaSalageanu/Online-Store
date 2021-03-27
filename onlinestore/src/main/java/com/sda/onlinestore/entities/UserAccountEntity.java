@@ -10,13 +10,20 @@ public class UserAccountEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String email;
+
+
+    private String username;
     private String password;
+    private String role;
+
+
     private String adress;
 
     // One to one 
     private String logotype;
-    private String role;
+
     private String preferredChannel;
+
 
     public int getId() {
         return id;
@@ -72,6 +79,14 @@ public class UserAccountEntity {
 
     public void setPreferredChannel(String preferredChannel) {
         this.preferredChannel = preferredChannel;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 }
