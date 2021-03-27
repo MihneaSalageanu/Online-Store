@@ -10,6 +10,8 @@ public class OrderLineEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer OrderLineId;
 
+    @ManyToOne
+    private ProductsEntity product;
     private Double quantityOfProducts;
     private Double price;
 
