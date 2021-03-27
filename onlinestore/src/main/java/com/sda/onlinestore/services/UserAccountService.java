@@ -19,7 +19,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserAccountService implements UserDetailsService {
+public class UserAccountService implements UserDetailsService{
+
+    public UserAccountEntity getUserByName(String username){
+    Optional<UserAccountEntity> userAccountEntityOptional= userAccountRepository.findByUsername(username);
+    return userAccountEntityOptional.get();
+}
 
     @Autowired
     private UserAccountRepository userAccountRepository;
