@@ -8,14 +8,17 @@
 <body>
 
 <a th:href="@{/add-producer}"><button>Add producer</button></a>
+<a th:href="@{/test-producer}"><button>Test producer</button></a>
 
 <p>Here are my producers</p>
 
 <li th:each="producer: ${producers}">
     <p th:text="${producer.producerId}"/>
     <p th:text="${producer.producerName}"/>
-    <a th:href="@{/delete-producer/{producerId}(id = ${producer.producerId})}"><button>Delete</button></a>
-    <a th:href="@{/edit-producer/{producerId}(id = ${producer.producerId})}"><button>Edit</button></a>
+    <a th:href="@{/delete-producer/{producerId}(producerId = ${producer.producerId})}"><button>Delete</button></a>
+    <a th:href="@{/edit-producer/{producerId}(producerId = ${producer.producerId})}">Edit</a>
+
+
 
 </li>
 

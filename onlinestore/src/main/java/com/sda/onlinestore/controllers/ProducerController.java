@@ -30,12 +30,20 @@ public class ProducerController {
 
     @GetMapping(path = "add-producer")
     public String addProducerPage(Model model) {
+        System.out.println("addProducerPage");
         model.addAttribute("newProducer", new ProducerEntity());
+        return "add-producer";
+    }
+
+    @GetMapping(path = "test-producer")
+    public String testProducerPage(Model model) {
+        System.out.println("testProducer");
         return "add-producer";
     }
 
     @PostMapping(path = "producer/add")
     public String addProducer(@ModelAttribute ProducerEntity newProducer) {
+        System.out.println("addProducer");
         producerService.addProducer(newProducer);
         return "redirect:/getProducers";
 
@@ -43,12 +51,14 @@ public class ProducerController {
 
     @GetMapping(path = "edit-producer/{id}")
     public String editProducerPage(Model model, @PathVariable("id") long id) {
+        System.out.println("editProducerId");
         ProducerEntity producerEntity = producerService.getProducer(id);
         model.addAttribute("producerToBeEdit", producerEntity);
         return "edit-producer";
     }
         @PostMapping(path = "producer/edit")
     public String editProducer(@ModelAttribute ProducerEntity producerToBeEdit){
+            System.out.println("editingProducer");
         producerService.editProducer(producerToBeEdit);
         return "redirect:/getProducers";
         }

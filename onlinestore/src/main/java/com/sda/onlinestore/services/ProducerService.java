@@ -18,6 +18,9 @@ public class ProducerService {
     public void addProducer(ProducerEntity newProducer) {
         producerRepository.save(newProducer);
     }
+    public void testProducer(ProducerEntity newProducer) {
+        System.out.println("testProducer");
+    }
 
     public List<ProducerEntity> getAllProducers() {
         return producerRepository.findAll();

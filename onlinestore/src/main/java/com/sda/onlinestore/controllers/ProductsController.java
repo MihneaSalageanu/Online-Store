@@ -47,6 +47,7 @@ public class ProductsController {
 
     @GetMapping(path = "edit-product/{id}")
     public String editProductPage(Model model, @PathVariable("id") long id) {
+        System.out.println("editProductId");
         ProductsEntity productsEntity = productsService.getProduct(id);
         model.addAttribute(("productToBeEdit"), productsEntity);
         List<ProducerEntity> producerEntities = producerService.getAll();
@@ -56,6 +57,7 @@ public class ProductsController {
 
     @PostMapping(path = "product/edit")
     public String editProduct(@ModelAttribute ProductsEntity productToBeEdit) {
+        System.out.println("product/Add");
         productsService.editProduct(productToBeEdit);
         return "redirect:/getProducts";
     }
